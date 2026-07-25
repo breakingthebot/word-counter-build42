@@ -5,6 +5,14 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0] - 2026-07-25
+
+### Added
+- Integrated **Vocabulary Variety & Type-Token Ratio (TTR) Richness Analyzer** in `src/services/vocabularyService.ts` and `src/components/VocabularyRichness.svelte`.
+- Added Type-Token Ratio percentage gauge (0 - 100%), unique word ratio, and richness grade badges (`🌟 Exceptional`, `📖 High Variety`, `📝 Moderate Variety`, `🔁 Repetitive`).
+- Added overused word detection and 1-Click synonym pills.
+- Added unit tests in `src/services/vocabularyService.spec.ts`.
+
 ## [0.9.0] - 2026-07-25
 
 ### Added
