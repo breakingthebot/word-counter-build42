@@ -5,6 +5,15 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0] - 2026-07-25
+
+### Added
+- Integrated **Sentence Structure & Length Rhythm Inspector** in `src/services/sentenceRhythmService.ts` and `src/components/SentenceRhythmInspector.svelte`.
+- Added sentence length classification thresholds (`short`, `medium`, `long`, `extra_long`).
+- Added sentence breakdown distribution bar, average sentence length counter, and rhythm health status (`🌊 Excellent Flow`, `⚡ Energetic & Punchy`, `📜 Dense & Complex`, `🔁 Monotonous`).
+- Added visual prose rhythm heatmap canvas highlighting sentence length pills.
+- Added unit tests in `src/services/sentenceRhythmService.spec.ts`.
+
 ## [0.11.0] - 2026-07-25
 
 ### Added

@@ -14,6 +14,7 @@
   import CustomSpeedEstimator from './components/CustomSpeedEstimator.svelte';
   import AudioProofreader from './components/AudioProofreader.svelte';
   import VocabularyRichness from './components/VocabularyRichness.svelte';
+  import SentenceRhythmInspector from './components/SentenceRhythmInspector.svelte';
   import TextDiffViewer from './components/TextDiffViewer.svelte';
   import ReadabilityScore from './components/ReadabilityScore.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
@@ -43,6 +44,8 @@
   <AudioProofreader />
 
   <VocabularyRichness />
+
+  <SentenceRhythmInspector />
 
   <TextDiffViewer />
 
