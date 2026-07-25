@@ -6,6 +6,7 @@
 <script lang="ts">
   import Header from './components/Header.svelte';
   import MetricsOverview from './components/MetricsOverview.svelte';
+  import WritingSprintTimer from './components/WritingSprintTimer.svelte';
   import TextEditor from './components/TextEditor.svelte';
   import TextToolsBar from './components/TextToolsBar.svelte';
   import ReadabilityScore from './components/ReadabilityScore.svelte';
@@ -17,6 +18,8 @@
   <Header />
 
   <MetricsOverview />
+
+  <WritingSprintTimer />
 
   <TextEditor />
 
