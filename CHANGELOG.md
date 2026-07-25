@@ -5,6 +5,15 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-07-25
+
+### Added
+- Integrated **Multi-Format Document Exporter (PDF, Markdown, HTML)** in `src/services/multiFormatExportService.ts`.
+- Added Markdown document exporter (`📄 Export Markdown (.md)`) with frontmatter metadata (`title`, `words`, `date`).
+- Added HTML document exporter (`🌐 Export HTML (.html)`) and Printable PDF document window (`🖨️ Printable PDF`).
+- Updated `AGENTS.md` standard for GitHub repository description and topics, and updated GitHub metadata via `gh repo edit`.
+- Added unit tests in `src/services/multiFormatExportService.spec.ts`.
+
 ## [0.3.0] - 2026-07-25
 
 ### Added

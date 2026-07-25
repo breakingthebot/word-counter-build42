@@ -1,10 +1,11 @@
 <!-- src/components/ExportToolbar.svelte -->
-<!-- Export as .txt file, copy to clipboard, and draft history manager component. -->
-<!-- Connects to: src/stores/textStore.ts -->
+<!-- Multi-format export toolbar (.txt, .md, .html, Printable PDF) & draft manager component. -->
+<!-- Connects to: src/services/multiFormatExportService.ts, src/stores/textStore.ts -->
 <!-- Created: 2026-07-25 -->
 
 <script lang="ts">
   import { text, draftHistory, saveCurrentDraft, loadDraftContent, deleteDraftItem } from '../stores/textStore';
+  import { generateMarkdownDocument, generateHtmlDocument, triggerFileDownload } from '../services/multiFormatExportService';
 
   let showDraftsModal = false;
   let copyNotification = false;
@@ -12,15 +13,30 @@
 
   function handleExportTxt() {
     if (!$text.trim()) return;
-    const blob = new Blob([$text], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `GourmetWord_Export_${Date.now()}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    triggerFileDownload($text, `WordCraft_Export_${Date.now()}.txt`, 'text/plain');
+  }
+
+  function handleExportMarkdown() {
+    if (!$text.trim()) return;
+    const md = generateMarkdownDocument($text, 'WordCraft Document');
+    triggerFileDownload(md, `WordCraft_Doc_${Date.now()}.md`, 'text/markdown');
+  }
+
+  function handleExportHtml() {
+    if (!$text.trim()) return;
+    const html = generateHtmlDocument($text, 'WordCraft Document');
+    triggerFileDownload(html, `WordCraft_Doc_${Date.now()}.html`, 'text/html');
+  }
+
+  function handleExportPdfPrint() {
+    if (!$text.trim()) return;
+    const html = generateHtmlDocument($text, 'WordCraft Document');
+    const printWin = window.open('', '_blank');
+    if (printWin) {
+      printWin.document.write(html);
+      printWin.document.close();
+      printWin.focus();
+    }
   }
 
   function handleCopyToClipboard() {
@@ -40,11 +56,23 @@
 <div class="export-toolbar card">
   <div class="action-buttons">
     <button on:click={handleExportTxt} disabled={!$text.trim()} class="btn btn-primary">
-      📥 Export as .txt File
+      📥 Export .txt
+    </button>
+
+    <button on:click={handleExportMarkdown} disabled={!$text.trim()} class="btn btn-secondary">
+      📄 Export Markdown (.md)
+    </button>
+
+    <button on:click={handleExportHtml} disabled={!$text.trim()} class="btn btn-secondary">
+      🌐 Export HTML (.html)
+    </button>
+
+    <button on:click={handleExportPdfPrint} disabled={!$text.trim()} class="btn btn-secondary">
+      🖨️ Printable PDF
     </button>
 
     <button on:click={handleCopyToClipboard} disabled={!$text.trim()} class="btn btn-secondary">
-      📋 Copy to Clipboard
+      📋 Copy Text
     </button>
 
     <button on:click={() => showDraftsModal = !showDraftsModal} class="btn btn-secondary">
@@ -113,7 +141,7 @@
   .action-buttons {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
   }
 
