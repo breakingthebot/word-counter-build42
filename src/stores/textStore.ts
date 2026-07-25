@@ -14,7 +14,7 @@ export interface DraftItem {
   updatedAt: string;
 }
 
-const DEFAULT_SAMPLE_TEXT = `Welcome to GourmetWord — the ultra-fast, reactive Svelte word and text counter.
+const DEFAULT_SAMPLE_TEXT = `Welcome to WordCraft — the ultra-fast, reactive Svelte word and text counter.
 
 Type or paste your text here to get real-time metrics including character count, word count, sentence count, reading time, and Flesch-Kincaid readability scoring.
 

@@ -5,6 +5,16 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-07-25
+
+### Added
+- Integrated **Grammar & Writing Style Flaw Scanner** in `src/services/flawScannerService.ts` and `src/components/WritingFlawScanner.svelte`.
+- Rebranded application from `GourmetWord` to **WordCraft** to eliminate prefix drift from Build 41.
+- Added real-time detection for passive voice constructions, clichés, wordy phrases, and long/hard sentences (>30 words).
+- Added filter tabs and actionable 1-click writing improvement suggestions.
+- Embedded flaw scanner into `src/App.svelte`.
+- Added unit tests in `src/services/flawScannerService.spec.ts`.
+
 ## [0.2.0] - 2026-07-25
 
 ### Added

@@ -27,7 +27,7 @@
     <div class="brand-row">
       <span class="logo-icon">📝</span>
       <div>
-        <h1 class="app-title">GourmetWord</h1>
+        <h1 class="app-title">WordCraft</h1>
         <p class="app-subtitle">Reactive Svelte Live Word, Character & Readability Counter</p>
       </div>
     </div>

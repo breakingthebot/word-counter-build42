@@ -1,5 +1,5 @@
 <!-- src/App.svelte -->
-<!-- Root App component for GourmetWord Live Text & Word Counter. -->
+<!-- Root App component for WordCraft Live Text & Word Counter. -->
 <!-- Connects to: src/components/*, src/stores/textStore.ts -->
 <!-- Created: 2026-07-25 -->
 
@@ -8,6 +8,7 @@
   import MetricsOverview from './components/MetricsOverview.svelte';
   import WritingSprintTimer from './components/WritingSprintTimer.svelte';
   import TextEditor from './components/TextEditor.svelte';
+  import WritingFlawScanner from './components/WritingFlawScanner.svelte';
   import TextToolsBar from './components/TextToolsBar.svelte';
   import ReadabilityScore from './components/ReadabilityScore.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
@@ -23,6 +24,8 @@
 
   <TextEditor />
 
+  <WritingFlawScanner />
+
   <TextToolsBar />
 
   <div class="analytics-grid">
@@ -33,7 +36,7 @@
   <ExportToolbar />
 
   <footer class="app-footer">
-    <p>GourmetWord — Built with Svelte, Vite, & TypeScript • Open Source MIT License</p>
+    <p>WordCraft — Built with Svelte, Vite, & TypeScript • Open Source MIT License</p>
   </footer>
 </main>
 
