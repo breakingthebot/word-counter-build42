@@ -10,8 +10,9 @@
   import TextEditor from './components/TextEditor.svelte';
   import WritingFlawScanner from './components/WritingFlawScanner.svelte';
   import TextToolsBar from './components/TextToolsBar.svelte';
-  import ReadabilityScore from './components/ReadabilityScore.svelte';
   import CustomSpeedEstimator from './components/CustomSpeedEstimator.svelte';
+  import TextDiffViewer from './components/TextDiffViewer.svelte';
+  import ReadabilityScore from './components/ReadabilityScore.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
   import ExportToolbar from './components/ExportToolbar.svelte';
 </script>
@@ -30,6 +31,8 @@
   <TextToolsBar />
 
   <CustomSpeedEstimator />
+
+  <TextDiffViewer />
 
   <div class="analytics-grid">
     <ReadabilityScore />
