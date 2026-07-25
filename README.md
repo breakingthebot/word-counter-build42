@@ -39,6 +39,10 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 npm run test
 ```
 
+## Deployed
+- **Live Vercel Production**: [https://word-counter-build42.vercel.app](https://word-counter-build42.vercel.app)
+- **GitHub Repository**: [https://github.com/breakingthebot/word-counter-build42](https://github.com/breakingthebot/word-counter-build42)
+
 ## Architecture Notes
 Plain English explanation of what was built and why:
 "I built GourmetWord as a reactive live text counter in Svelte. Svelte's compile-time reactivity makes computing text statistics (words, characters, sentences, paragraphs, reading speed, and Flesch-Kincaid readability grade) virtually instantaneous on every keystroke with zero UI lag. I implemented text transformation tools (case conversions, line deduplication, HTML stripping) and an export engine that packages text into downloadable `.txt` files or saves drafts to local browser storage."

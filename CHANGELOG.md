@@ -5,6 +5,16 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-07-25
+
+### Added
+- Integrated **Reading Time Estimator for Custom Speeds** in `src/services/customReadingSpeedService.ts` and `src/components/CustomSpeedEstimator.svelte`.
+- Added interactive WPM slider (50 - 500 WPM) with real-time recalculated reading duration.
+- Added 5 audience reading profiles comparison grid (`⚡ Fast Skimmer`, `📖 Standard Adult`, `🎙️ Audiobook`, `🎓 Academic`, `🌍 ESL Learner`).
+- Updated `README.md` with live Vercel deployment URL (`https://word-counter-build42.vercel.app`).
+- Fixed accessibility (`A11y`) button markup in Svelte components.
+- Added unit tests in `src/services/customReadingSpeedService.spec.ts`.
+
 ## [0.4.0] - 2026-07-25
 
 ### Added

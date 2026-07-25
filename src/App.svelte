@@ -11,6 +11,7 @@
   import WritingFlawScanner from './components/WritingFlawScanner.svelte';
   import TextToolsBar from './components/TextToolsBar.svelte';
   import ReadabilityScore from './components/ReadabilityScore.svelte';
+  import CustomSpeedEstimator from './components/CustomSpeedEstimator.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
   import ExportToolbar from './components/ExportToolbar.svelte';
 </script>
@@ -27,6 +28,8 @@
   <WritingFlawScanner />
 
   <TextToolsBar />
+
+  <CustomSpeedEstimator />
 
   <div class="analytics-grid">
     <ReadabilityScore />
