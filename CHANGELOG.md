@@ -5,6 +5,15 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-07-25
+
+### Added
+- Integrated **Paragraph Typing Test Mode** in `src/services/typingTestService.ts` and `src/components/WritingSprintTimer.svelte`.
+- Added practice paragraph dataset across 4 categories (`Tech & Coding`, `Productivity`, `Philosophy`, `Literature`).
+- Added real-time character accuracy rate (%), typo error counter, WPM speed scoring, and grade badges.
+- Added mode toggle between `⚡ Freeform Writing Sprint` and `⌨️ Paragraph Typing Test`.
+- Added unit tests in `src/services/typingTestService.spec.ts`.
+
 ## [0.6.0] - 2026-07-25
 
 ### Added
