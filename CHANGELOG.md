@@ -5,6 +5,14 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.13.0] - 2026-07-25
+
+### Added
+- Integrated **Text Anonymizer & PII Redactor** in `src/services/piiAnonymizerService.ts` and `src/components/TextAnonymizer.svelte`.
+- Added regex redaction pattern matchers for Emails (`[REDACTED_EMAIL]`), Phone Numbers (`[REDACTED_PHONE]`), SSNs (`[REDACTED_SSN]`), Credit Cards (`[REDACTED_CREDIT_CARD]`), and IP Addresses (`[REDACTED_IP]`).
+- Added redaction filter checkboxes and 1-Click `🛡️ Apply Redacted Text to Editor` action button.
+- Added unit tests in `src/services/piiAnonymizerService.spec.ts`.
+
 ## [0.12.0] - 2026-07-25
 
 ### Added

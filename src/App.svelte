@@ -15,6 +15,7 @@
   import AudioProofreader from './components/AudioProofreader.svelte';
   import VocabularyRichness from './components/VocabularyRichness.svelte';
   import SentenceRhythmInspector from './components/SentenceRhythmInspector.svelte';
+  import TextAnonymizer from './components/TextAnonymizer.svelte';
   import TextDiffViewer from './components/TextDiffViewer.svelte';
   import ReadabilityScore from './components/ReadabilityScore.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
@@ -46,6 +47,8 @@
   <VocabularyRichness />
 
   <SentenceRhythmInspector />
+
+  <TextAnonymizer />
 
   <TextDiffViewer />
 
