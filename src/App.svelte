@@ -9,6 +9,7 @@
   import WritingSprintTimer from './components/WritingSprintTimer.svelte';
   import TextEditor from './components/TextEditor.svelte';
   import WritingFlawScanner from './components/WritingFlawScanner.svelte';
+  import SocialComplianceChecker from './components/SocialComplianceChecker.svelte';
   import TextToolsBar from './components/TextToolsBar.svelte';
   import CustomSpeedEstimator from './components/CustomSpeedEstimator.svelte';
   import TextDiffViewer from './components/TextDiffViewer.svelte';
@@ -27,6 +28,8 @@
   <TextEditor />
 
   <WritingFlawScanner />
+
+  <SocialComplianceChecker />
 
   <TextToolsBar />
 

@@ -5,6 +5,15 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-07-25
+
+### Added
+- Integrated **SEO & Social Media Post Compliance Checker** in `src/services/socialComplianceService.ts` and `src/components/SocialComplianceChecker.svelte`.
+- Added platform character limit meters for Twitter/X (280 chars), SEO Titles (60 chars), SEO Meta Descriptions (160 chars), LinkedIn posts (3,000 chars), Instagram captions (2,200 chars), and SMS messages (160 chars).
+- Added progress bars with dynamic status indicators (`optimal`, `warning`, `exceeded`).
+- Added 1-Click `✂️ Trim to Limit` action buttons.
+- Added unit tests in `src/services/socialComplianceService.spec.ts`.
+
 ## [0.7.0] - 2026-07-25
 
 ### Added
