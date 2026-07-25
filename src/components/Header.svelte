@@ -1,11 +1,13 @@
 <!-- src/components/Header.svelte -->
-<!-- Header component with target word goal calculator and progress gauge bar. -->
+<!-- Header component with target word goal calculator and Zen Focus launcher. -->
 <!-- Connects to: src/stores/textStore.ts -->
 <!-- Created: 2026-07-25 -->
 
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte';
   import { wordGoal, metrics, setWordGoal } from '../stores/textStore';
 
+  const dispatch = createEventDispatcher();
   let customGoalInput = $wordGoal;
 
   function handleGoalChange(e: Event) {
@@ -20,6 +22,10 @@
     setWordGoal(target);
     customGoalInput = target;
   }
+
+  function openZen() {
+    dispatch('openZenMode');
+  }
 </script>
 
 <header class="app-header card">
@@ -30,6 +36,10 @@
         <h1 class="app-title">WordCraft</h1>
         <p class="app-subtitle">Reactive Svelte Live Word, Character & Readability Counter</p>
       </div>
+
+      <button type="button" on:click={openZen} class="zen-launch-btn">
+        🧘 Zen Focus Mode
+      </button>
     </div>
 
     <!-- Word Target Goal Controls -->
@@ -87,6 +97,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .logo-icon {
@@ -105,6 +116,23 @@
   .app-subtitle {
     font-size: 13px;
     color: var(--text-secondary);
+  }
+
+  .zen-launch-btn {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(6, 182, 212, 0.25));
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  .zen-launch-btn:hover {
+    background: rgba(168, 85, 247, 0.5);
+    transform: translateY(-1px);
   }
 
   .goal-widget {

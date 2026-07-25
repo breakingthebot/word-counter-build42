@@ -5,6 +5,16 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0] - 2026-07-25
+
+### Added
+- Integrated **Ambient Distraction-Free Zen Focus Mode** in `src/services/zenFocusService.ts` and `src/components/ZenFocusModal.svelte`.
+- Added 5 ambient color themes (*Nord Frost*, *Cyberpunk Neon*, *Obsidian Dark*, *Vintage Sepia*, *Emerald Forest*).
+- Added Web Audio API typewriter click sound effect generator.
+- Added fullscreen writing canvas with floating live word count & reading time footer and `ESC` key exit shortcut.
+- Added launcher button in `src/components/Header.svelte`.
+- Added unit tests in `src/services/zenFocusService.spec.ts`.
+
 ## [0.10.0] - 2026-07-25
 
 ### Added

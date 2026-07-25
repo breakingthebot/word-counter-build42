@@ -18,10 +18,13 @@
   import ReadabilityScore from './components/ReadabilityScore.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
   import ExportToolbar from './components/ExportToolbar.svelte';
+  import ZenFocusModal from './components/ZenFocusModal.svelte';
+
+  let isZenOpen = false;
 </script>
 
 <main class="container">
-  <Header />
+  <Header on:openZenMode={() => isZenOpen = true} />
 
   <MetricsOverview />
 
@@ -54,6 +57,8 @@
     <p>WordCraft — Built with Svelte, Vite, & TypeScript • Open Source MIT License</p>
   </footer>
 </main>
+
+<ZenFocusModal bind:isOpen={isZenOpen} />
 
 <style>
   .analytics-grid {
