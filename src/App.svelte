@@ -12,6 +12,7 @@
   import SocialComplianceChecker from './components/SocialComplianceChecker.svelte';
   import TextToolsBar from './components/TextToolsBar.svelte';
   import CustomSpeedEstimator from './components/CustomSpeedEstimator.svelte';
+  import AudioProofreader from './components/AudioProofreader.svelte';
   import TextDiffViewer from './components/TextDiffViewer.svelte';
   import ReadabilityScore from './components/ReadabilityScore.svelte';
   import KeywordDensity from './components/KeywordDensity.svelte';
@@ -34,6 +35,8 @@
   <TextToolsBar />
 
   <CustomSpeedEstimator />
+
+  <AudioProofreader />
 
   <TextDiffViewer />
 

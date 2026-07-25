@@ -5,6 +5,14 @@ All notable changes to **Build 42 (GourmetWord — Reactive Svelte Live Word & C
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0] - 2026-07-25
+
+### Added
+- Integrated **Text-to-Speech Audio Proofreader** in `src/services/speechSynthesisService.ts` and `src/components/AudioProofreader.svelte`.
+- Added Web Speech API playback controls (`▶️ Play`, `⏸️ Pause`, `⏹️ Stop`).
+- Added voice selection dropdown, speech rate controls (`0.75x`, `1.0x`, `1.25x`, `1.5x`), and active word highlight narration window.
+- Added unit tests in `src/services/speechSynthesisService.spec.ts`.
+
 ## [0.8.0] - 2026-07-25
 
 ### Added
