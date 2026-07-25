@@ -1,0 +1,8 @@
+AGENTS.md
+BUILD_NOTES.md
+.env
+node_modules/
+.DS_Store
+*.log
+dist/
+.vercel
